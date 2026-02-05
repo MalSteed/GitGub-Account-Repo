@@ -1,0 +1,148 @@
+<!-- Ctrl + ? will generate the code comment in VS code for the type of code you are using this is an HTML comment - It is a multi-line comment --> 
+ <!-- HTMP is Hypertext markup Language; the line below specifies that this is an HTML5 webpage -->
+<!DOCTYPE html>
+    <!-- have an HTML opening tag after the doctype is specified -->
+<html lang="en">
+    <!-- head section - This is primarily for browsers and search engines -->
+ </head>  <!-- opening tag -->
+ <!-- this means that pretty much any charater from any language may appear in this page -->
+       <meta charset="UTF-8">
+       <!-- this is the first step in having a mobile friednly design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- short, sweet, descriptive -->
+    <title>CSC120 Home Page</title>
+
+    <link rel="stylesheet" href="Main.css">
+</head>
+<!-- all of our page content goes between the opening and closing body tags -->
+<body>
+    <!-- header is a semantic HTML tag -->
+     <!-- Header, Typically has logo and/or menu -->
+    <Header>
+        
+        <!-- H1 is heading the page title -->
+
+    <h1> welcom to my CSC102 homepage</h1>
+
+    </Header>
+
+    <div>
+<p> 
+    <Img id="memeImage" Src="76905c477d04c11fde4bdbc4835552cf.jpg"> <Img:sizes>300</Img:sizes>
+
+</p>
+    </div>
+
+    <H2>Play my dice game</H2>
+
+    <button onclick="PlayDiceGame();">Play Game</button>
+    <div id="divMessage"> Waiting for the game start</div>
+    <div id="DivRoll1"></div>
+    <div id="DivRoll2"></div>
+    <div id="DivSum"></div>
+
+    <!-- TODO: move this JavaScript code for the game to an external .js File -->
+    <script>
+        
+        function PlayDiceGame(){
+            // variable to hol our first roll of the die
+            let roll1 = getRandomNumber();
+            
+            console.log("roll1 =", roll1);
+
+            let roll2 = getRandomNumber();
+
+            console.log("roll2 = " + roll2);
+
+            // variable to hold the sum of our rolls
+            let sum = 0;
+        } 
+
+        // this function will generate a random number between 1 and 6
+        function getRandomNumber(){
+            // get a random number between 0 and 1 and mulitply by 6
+            let number = Math.random() * 6;
+
+            // this will round our number up, so we get a number between 1 and 6
+            number = math.floor(number) + 1;
+
+            //returning / passing back the random number
+            return number;
+        }
+    </script>
+
+    <H2>There are 4 pillars of programming</H2>
+    
+    <H3>Variable</H3>
+
+    <!-- The script tags they specify that we are now coding with javascript - a whole new set of rules apply in javascript -->
+
+    <script>
+        // This is a single-line JavaScript comment
+        /*
+         this is a multi-line JavaScript comment
+        */
+
+        // a variable stores a piece of information
+        // variables should have descriptive names
+
+        // use descriptive variable names, such as firstname
+        // let is the best way to create a JavaScript variable
+
+        let firstname = "Malaki"
+        // var and let are basically equivalent for the purposes of this class - but use let cause it's better
+        var lastName = "steed"
+
+
+        
+    </script>
+
+    <h3> Decision Logic (if/else)</h3>
+    <h3>Functions</h3>
+    <Script>
+        // les's talk about functions - functions are way to organize chunks of code; functions also allow us to write code 1 time and reuse it as many times as we need to
+
+        // when creating a function in JavaScript, use the keyword function to let the interpreter know that you are creating a reusable chunk of code
+        // we create a descriptive name for what our function will do; most of the time our function names should include a verb, startfuncrion names with a letter, you can use numbers and _
+        // canelcase or snake_case for naming styles - use whichever one you want, but stay consistent
+        // after the function name, use parantheses ( ) whater or not you are passing values into the function
+        // the function code must be placed within curly braces { }
+        function addNumbers(){
+            // create 2 variables so we can add them together
+            let number1 = 5; // we are hard-coding the value of 5 here
+            let number2 = 8; 
+
+            // create another variable to hold the sum
+            let sum = number1 + number2; 
+
+            // lets write out the sum to the console
+            // to concatenrate ( you can use + or ,)
+            console.log("The sum is:", sum);
+
+        }
+        // this line of code calls the function so we can test it
+        addNumbers();
+        
+    </Script>
+
+    <h3>Decision logic (if/else)</h3>
+    <!-- when testing an if statement make sure to use == (equality) instead of = (assignment: this will change the value of your variable, which you probably don't want) -->
+     <!-- if an if chunk of code, you will have 1 and only 1 if statement, you can have as many else if as needed, and optionally, 1 else statement. -->
+      <!-- && is or - both conditions must evaluate to true
+       Is or - only 1 condition must evalute to true -->
+    <script>
+        if (firstname == "Malaki" || lastName == "steed"){
+        // since the value in firstname is rae, this code will run
+        console.log("Malaki is here")
+        }
+        // else is the catch-all so when the if statement evalutes to false, the else will run
+        else{
+            console.log("Malaki is not here")
+        }
+    </script>
+    
+    <h3>Loops</h3>
+
+</body>
+<!-- the closing html tag should be at the very end of the file -->
+</html> <!-- closing tag -->

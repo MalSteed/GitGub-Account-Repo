@@ -1,0 +1,18 @@
+/* this is a CSS comment - This is the only comment style
+Css System
+
+selector(
+   Property::  value
+   Property:   Value
+)
+
+Selector: 3 options: HTML tag/element, ID of an element (#id), custom class - Starts . (.classroom)
+
+Just use external CSS files in this class
+*/
+
+body{
+    background-color: rgb(189, 23, 211);
+    color: white;
+}
+
