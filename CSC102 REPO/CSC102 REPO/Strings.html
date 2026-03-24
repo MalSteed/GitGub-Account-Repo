@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lnag="en"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input Validation</title>
+    <link rel="stylesheet" href="Main.CSS">
+
+</head>
+<body>
+    <Header>
+        <h1>Input Validation</h1>
+    </Header>
+    <main>
+        <!-- this div is where we will show messages to the user about their input -->
+        <div id="divMessage"></div>
+        <form>
+            <!-- add div tags around each label/input combo, so that they are on the line together; lables & inputs are inline elements; div is block -->
+             <div>
+            <label for="txtFirstName">First Name</label>
+            <input type="text" id="txtFirstName">
+             </div>
+
+             <!-- this is the input for the last name -->
+             <div>
+                <label for="txtLastName">First Name</label>
+                <input type="text" id="txtLastName">
+            </div>
+            
+            <div>
+                <label for="txtZip">zip code: </label>
+                <input type="text" id="txtZip">
+            </div>
+
+            <!-- use a button to validate the form, set the type to button so clicking does not submit the form -->
+            <button type="button" onclick="validate();">Validate!</button>
+
+        </form>
+    </main>
+
+    <script src="Dice Game.js"></script>
+</body>
+</html>
