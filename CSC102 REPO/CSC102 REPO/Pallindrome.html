@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en"
 <head>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Palindrome Checker </title>
 
 
     <link rel="stylesheet" href="main.css"
 </head>
 <body>
     <header>
-        <h1>palindrome Checker</h1>
+    <h1> Palindrome Checker</h1>
     </header>
     <main>
         <form onsubmit="checkPalin(event);"
-            <label for="txtWord">Enter a word or phrase</label>
-            <input type="text" id="txtWord"
-            <input type="submit" value="Check word"
+            <label for="txtWord">Enter a word or phrase:</label>
+            <input type="text" id="txtWord">
+            <input type="submit" value="Check word">
         </form>
 
- 
+        <!-- create a div to hold the result of the palindrome check -->
         <div id="divMessage"></div>
     </main>
 
+
+    <!-- TODO: MOVE THIS jAVAsCRIPT CODE TO AN EXTERNAL .js file -->
     <script>
+        // create the checkPalin function
         Function checkPalin(event){
             // prevent the form from submitting (so the page does not refresh)
             event.preventDefault();
