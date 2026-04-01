@@ -202,6 +202,55 @@
         // call the funtion we just wrote to ask the user for numbers
         runcal();
 
+        //define the Animal Class we built the UML for
+        class Animal{
+            // constructor - allows us to quickly create a new object
+            constructor(new_species, kingdom, genus, family, color, age){
+                // we set up our properties on the fly
+                this.species = new_species;
+                this.kingdom = kingdom;
+                this.genus = genus;
+                this.family = family;
+                this.color = color;
+                this.age = age;
+            }
+
+            setFamily(new_family){
+                this.family = new_family;
+                // we would also need to change the other properties of genus, family, species
+
+            }
+
+            getFamily(){
+                return this.family
+            }
+
+            eat(){
+                // technically, we should return true or false, based on our UML diagram
+                return "the animal had some food";
+            }
+
+            makeSound(){
+                return "Animals in this family make this sound";
+
+            }
+        }
+            // create an animal object to bring our class to life
+            let cat = new Animal("Felidae", "Animal", "Feline", "Cat", "Black", 2)
+
+            console.log(cat.eat());
+            console.log(cat.makeSound());
+            console.log(getFamily())
+
+            // create a dog object
+            let dog = new Animal("canine", "Animal", "Latin word for dog", "dog", "yellow", 5)
+
+
+            console.log(dog.eat())
+            console.log(dog.makeSound())
+            console.log(dog.getFamily())
+        
+
 
     </script>
 
