@@ -6,14 +6,14 @@
     <title> Palindrome Checker </title>
 
 
-    <link rel="stylesheet" href="main.css"
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
     <h1> Palindrome Checker</h1>
     </header>
     <main>
-        <form onsubmit="checkPalin(event);"
+        <form onsubmit="checkPalin(event);">
             <label for="txtWord">Enter a word or phrase:</label>
             <input type="text" id="txtWord">
             <input type="submit" value="Check word">
@@ -21,67 +21,21 @@
 
         <!-- create a div to hold the result of the palindrome check -->
         <div id="divMessage"></div>
+
+        <!-- We will add an audio element to this div -->
+        <div id="divAudio"></div>
+
+        <!-- this button will add an audio element to the div above -->
+        <button id="btnAddAudio" onclick="addAdudio();">Add Audio</button>
+
+        <!-- 2 buttons to handle the playing of the sound -->
+        <button id="btnPlayAudio" onclick="playAdudio();" hidden>Play</button>
+        <button id="btnPauseAudio" onclick="pauseAdudio();" hidden>Pause</button>
+
     </main>
 
+    <Script src="Dice Game.js"></Script>
 
-    <!-- TODO: MOVE THIS jAVAsCRIPT CODE TO AN EXTERNAL .js file -->
-    <script>
-        // create the checkPalin function
-        Function checkPalin(event){
-            // prevent the form from submitting (so the page does not refresh)
-            event.preventDefault();
-
-            // create a variable to story the word that the user entered
-            let wordToTest = document.getElementById("txtWord").value;
-
-            console.log("wordToTest" + wordToTest)
-
-            // call the function to test it
-            // TODO: print out the result to the user
-            isPalin(wordToTest)
-
-            let bPalin = isPalin(wordToTest);
-
-            // create a shortcut to the message div
-            let divMessage = document.getElementById("divMessage")
-
-            if (bPalin == true){
-                divMessage.textContent = "The phrase is a palindrome!"
-            }
-            else{
-                divMessage.textContent = "the phrase is not a palindrome"
-            }
-        }
-
-        // create a function to test to see if a string is the same backwards and forwards
-        function isPalin(strToTest){
-            // I want to convert the string to all lowercase so that it is a more fair comparison
-            strToTest = strToTest.toLowerCase();
-
-            console.log("strToTest" + strToTest);
-
-            // create a new variable so can keep the original string for testing
-            let strReverse = strToTest
-
-            // convert the reverse striing to an array, we will reverse the contents
-            // so test would become tset and then convert the arry back to a string
-            strReverse = strReverse.split("").reverse().join("");
-
-            console.log("strReverse" + strReverse);
-
-            // compare the original string with the reversed string
-            // if they match, this function will return true, otherwise it will return false
-            if (strReverse == strToTest){
-                return true;
-            }
-            else{
-                return false;
-            }
-            // if we get to this line, it must not have been a palindrome, so return false
-            // or return Fasle
-        }
-    </script>
-
-
+    
 </body>
 </html>

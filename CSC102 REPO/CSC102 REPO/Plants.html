@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Manager</title>
+
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+    <Header>
+        
+        <!-- H1 is heading the page title -->
+
+    <h1> Housesitting Plant Manager</h1>
+ </Header>
+
+    <div>
+        <ul id="uLPlants"></ul>
+
+        <h2>Add a Plant</h2>
+        <label for="txtNewPlant">Plant name:</label> <input type="text" id="txtNewPlant">
+        <button onclick="addPlant();">Add Plant</button>
+    </div>
+
+
+    <script>
+
+        let arrPlants = ["Cactus", "Flower", "Aloe", "Rose", "Strewberry", "Tree", "Hydranga"];
+
+        // this function will loop through the plants in the array and add them to the uLPlants unorderd list as list items
+        function showPlants(){
+
+            // for Each is just another way of looping through the array
+            arrPlants.forEach();
+        }
+
+        // the show plant function will be called 1 time when the page loads
+        showPlants();
+
+       /* let plant1 = "Cactus";
+        let plant2 = "Flower";
+        let plant3 = "Aloe";
+        let plant4 = "Rose";
+        let plant5 = "Strewberry";
+        let plant6 = "Tree";
+        let plant7 = "hydranga";
+
+        console.log("plant1 =" + plant1);
+        console.log("plant1 =" + plant2);
+        console.log("plant1 =" + plant3);
+        console.log("plant1 =" + plant4);
+        console.log("plant1 =" + plant5);
+        console.log("plant1 =" + plant6);
+        console.log("plant1 =" + plant7);
+        */
+
+        // instead of setting up 7 seprate variable, we are setting up 1 array with 7 slots
+        // Arrays start at 0 and not 1 (ex. item 7 is array 6 and item 1 is array 0)
+        /*let arrPlants = ["Cactus", "Flower", "Aloe", "Rose", "Strewberry", "Tree", "Hydranga"]; */
+
+        /* // loop through the array
+        for (let i=0; i < arrPlants.length; i++){
+            console.log("plant" + (i+1) + " =" + arrPlants[i]);
+        }
+
+        console.log("random plant=" + arrPlants[2]);
+        */
+
+    </script>
+</body>
+</html>

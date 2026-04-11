@@ -65,9 +65,6 @@ function validate(){
     // zip code variable
     let zip = document.getElementById("txtZip").value;
 
-    // show the zip in the console
-    console.log("zip" = zip);
-
     // create a variable to hold the first name + " " + last name
     let fullName = firstName + " " + lastName;
 
@@ -141,4 +138,106 @@ function validate(){
         // adjust according based on your screen size.
         return Math.floor(Math.random() * 800)
 
+    }
+
+     // this function will add an audio element to the page so we can listion to a sound clip
+     function addAdudio(){
+        let divAudio = document.getElementByid("divAudio");
+
+        // create an audio HTML element using JavaScript
+        let audioElement = document.createElement("audio");
+        // set the attribute of our new HtML element
+        // add an ID so we can more easily work with this elemnt
+        audioElement.setAttribute("id", "myAudio");
+
+        // add the file name as the source
+        // if you are using the sound file provied in the assignment, your code will look like this
+        audioElement.setAttribute("src", "sample-3s.mp3");
+
+        // set the volume to half by deault
+        audioElement.volume = .8;
+
+        // highly suggested - add controls
+        audioElement.setAttribute("controls", "controls");
+
+        // add our new HTML audio element to the div that will host it
+        divAudio.appendChild(audioElement)
+
+        // disallow the user from clicking the add audio button now that the audio has been added to the webpage
+        document.getElementById("btnAddAudio").hidden = true;
+
+        // make the play and pause buttons appear
+        document.getElementById("btnPlayAudio").hidden = false;
+        document.getElementById("btnPauseAudio").hidden = false;
+    }
+
+    // create the function so that we can play the audio
+    function playAdudio(){
+        // create a shourcut/nickname to the audio element that we created in the addAudio function
+        let myAudio = document.getElementById("myAudio");
+        // let's play the sound!
+        myAudio.play();
+    }
+
+    // create the function so that we can stop playing the audio - really pause it
+    function pauseAdudio(){
+        // create a shourcut/nickname to the audio element that we created in the addAudio function
+        let myAudio = document.getElementById("myAudio");
+        // let's play the sound!
+        myAudio.pause();
+    }
+
+     // create the checkPalin function
+     function checkPalin(event){
+        // prevent the form from submitting (so the page does not refresh)
+        event.preventDefault();
+
+        // create a variable to story the word that the user entered
+        let wordToTest = document.getElementById("txtWord").value;
+
+        console.log("wordToTest" + wordToTest)
+
+        // call the function to test it
+        // TODO: print out the result to the user
+        isPalin(wordToTest)
+
+        let bPalin = isPalin(wordToTest);
+
+        // create a shortcut to the message div
+        let divMessage = document.getElementById("divMessage")
+
+        if (bPalin == true){
+            divMessage.textContent = "The phrase is a palindrome!"
+        }
+        else{
+            divMessage.textContent = "the phrase is not a palindrome"
+        }
+    }
+
+    // create a function to test to see if a string is the same backwards and forwards
+    function isPalin(strToTest){
+        // I want to convert the string to all lowercase so that it is a more fair comparison
+        strToTest = strToTest.toLowerCase();
+
+        console.log("strToTest" + strToTest);
+
+        // create a new variable so can keep the original string for testing
+        let strReverse = strToTest
+
+        // convert the reverse striing to an array, we will reverse the contents
+        // so test would become tset and then convert the arry back to a string
+        strReverse = strReverse.split("").reverse().join("");
+
+        console.log("strReverse" + strReverse);
+
+        // compare the original string with the reversed string
+        // if they match, this function will return true, otherwise it will return false
+        if (strReverse == strToTest){
+            return true;
+        }
+        else{
+            return false;
+        }
+        // if we get to this line, it must not have been a palindrome, so return false
+        // or return Fasle
     }
