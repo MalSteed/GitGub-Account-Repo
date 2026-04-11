@@ -161,7 +161,7 @@ function validate(){
         audioElement.setAttribute("controls", "controls");
 
         // add our new HTML audio element to the div that will host it
-        divAudio.appendChild(audioElement)
+        divAudio.appendChild(audioElement);
 
         // disallow the user from clicking the add audio button now that the audio has been added to the webpage
         document.getElementById("btnAddAudio").hidden = true;
