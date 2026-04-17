@@ -142,13 +142,13 @@ function validate(){
 
      // this function will add an audio element to the page so we can listion to a sound clip
      function addAdudio(){
-        let divAudio = document.getElementByid("divAudio");
+        let divAudio = document.getElementById("divAudio");
 
         // create an audio HTML element using JavaScript
         let audioElement = document.createElement("audio");
         // set the attribute of our new HtML element
         // add an ID so we can more easily work with this elemnt
-        audioElement.setAttribute("id", "myAudio");
+        audioElement.setAttribute("Id", "myAudio");
 
         // add the file name as the source
         // if you are using the sound file provied in the assignment, your code will look like this

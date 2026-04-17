@@ -40,11 +40,11 @@ function addPlant(){
     ulPlants.innerHTML = "";
 
     // get the text that the user entered into the add plant textbox
-    let NewPlant = document.getElementById("txtNewPlant").value.trim();
+    let newPlant = document.getElementById("txtNewPlant").value.trim();
 
     // make sure that the input is not empty
     if (newPlant == ""){
-        document.getElementById("divMessage").textContent = "Please enter a vaild plant name"
+        document.getElementById("divMessage").textContent = "Please enter a valid plant name"
         // we're done
         return;
     }
@@ -56,9 +56,9 @@ function addPlant(){
     document.getElementById("divMessage").textContent + " was added"
 
     // erase the text from the textbox
-    document.getElementById("txtNewPlant").value = ""
+    document.getElementById("txtnewPlant").value = ""
 
-    // we need to call show plants again so that we see the new plants on the pahge
+    // we need to call show plants again so that we see the new plants on the page
     showPlants();
 }
 
