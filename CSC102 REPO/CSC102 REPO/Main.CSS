@@ -20,12 +20,16 @@ header{
     text-align: center;
 }
 
-nav{
+/*nav{
     height: 600px;
     width: 200px;
     float: left;
     padding: 5px;
     line-height: 30px;
+}*/
+
+main{
+    text-align: left;
 }
 
 
@@ -69,4 +73,21 @@ button{
 
 button:hover{
     background-color: cyan;
+}
+
+/* Menu Styles
+
+nav a - these styles will only apply to anchor tags in the nav section*/
+a{
+    text-decoration: underline;
+    color: white;
+    font-size: x-large;
+    padding: 5px 10px;
+    border: 4px solid white;
+
+}
+
+a:hover{
+    background-color: red;
+
 }

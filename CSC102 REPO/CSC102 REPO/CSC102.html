@@ -19,7 +19,18 @@
     <!-- header is a semantic HTML tag -->
      <!-- Header, Typically has logo and/or menu -->
     <Header>
-        
+        <!-- this is where my menu will live - so I can navigate to all my pages -->
+        <nav>
+           <a href="CSC102.html">Main Page</a>
+           <a href="Pallindrome.html">Pallindrome</a>
+           <a href="Plants.html">Plants Chart</a>
+           <a href="Strings.html"> Strings</a>
+           <a href="Tables.html">Table Page</a>
+           <a href="tiem_log.html">Time Log</a>
+           <a href="Boards.html"> Major Page</a>
+        </nav>
+
+
         <!-- H1 is heading the page title -->
 
     <h1> welcome to my CSC102 homepage</h1>
@@ -162,7 +173,7 @@
         // create a function to get some numbers and add them together
         function runcal(){
             // set up 2 variables to hold the numbers that the user eventually give us 
-            let num1 = 0;
+           let num1 = 0;
             let num2 = 0;
 
             // this variable will hold the dondition that our while loop is going to test
@@ -170,7 +181,7 @@
 
             // set up our while loop to ask for number 1 
               // ask the user for num1 using a javaScript 
-                num1 = prompt("please enter number 1:");
+               num1 = prompt("please enter number 1:");
 
                  while (!isValid){
              // isNaN = is not a number - this return true if the user entered a string , such as 'eight'
@@ -179,9 +190,9 @@
                 }
                 else{
                     // changing invalid to true, gets us out of this loop
-                    isValid = true
-                }
-            }
+                   isValid = true
+               }
+           }
             while (!isValid){
              // isNaN = is not a number - this return true if the user entered a string , such as 'eight'
                 if (isNaN(num2)){
@@ -253,6 +264,13 @@
 
 
     </script>
+
+<footer>
+    Malaki Steed<br>
+    University of Advancing Technology<br>
+    2625 W Baseline Rd<br>
+    Tempe, AZ 85283
+</footer>
 
 </body>
 <!-- the closing html tag should be at the very end of the file -->
